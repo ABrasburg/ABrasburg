@@ -1,6 +1,6 @@
-## Buenas! Soy Ariel Mirra <img src="https://raw.githubusercontent.com/iampavangandhi/iampavangandhi/master/gifs/Hi.gif" width="40" />
+## Buenas! Soy Agustin Brasburg <img src="https://raw.githubusercontent.com/iampavangandhi/iampavangandhi/master/gifs/Hi.gif" width="40" />
 
-⚡ Actualmente trabajo como Senior Software Engineer SMTS en Salesforce, mi foco está en crecer mi conocimiento y performar a mi mejor nivel, todos los días.
+👨‍💻 Recibido en Ingeniería en Informática en FIUBA y trabajo como ayudante de cátedra en Fundamentos de la Programación. Me enfoco en aprender y mejorar constantemente, aplicando buenas prácticas de desarrollo y enfrentando nuevos desafíos con entusiasmo.
 
 ### 📈 Mis stats en GitHub
 <br>
