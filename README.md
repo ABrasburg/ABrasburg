@@ -53,4 +53,5 @@
 - 🧠 [**Cliente y Servidor Git en Rust**](https://github.com/ABrasburg/GitRust): Implementación académica de Git desde cero, utilizando Rust.
 - 📚 [**Problemas de Programación y Estructuras de Datos**](https://github.com/ABrasburg/Daily_problems): Colección de problemas resueltos en Python, con estructuras avanzadas.
 
+### 🤝 ¿Charlamos?
 💬 Estoy siempre abierto a nuevas oportunidades y colaboraciones. ¡No dudes en escribirme!
