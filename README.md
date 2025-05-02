@@ -1,6 +1,6 @@
 ## Buenas! Soy Agustin Brasburg <img src="https://raw.githubusercontent.com/iampavangandhi/iampavangandhi/master/gifs/Hi.gif" width="40" />
 
-👨‍💻 Recibido en Ingeniería en Informática en FIUBA y trabajo como ayudante de cátedra en Fundamentos de la Programación. Me enfoco en aprender y mejorar constantemente, aplicando buenas prácticas de desarrollo y enfrentando nuevos desafíos con entusiasmo.
+👨‍💻 Soy graduado de Ingeniería en Informática por FIUBA y actualmente trabajo como ayudante de cátedra en Fundamentos de la Programación. Me apasiona construir software útil y mantenerme en constante aprendizaje. Disfruto resolver problemas complejos aplicando buenas prácticas, herramientas modernas y mucho entusiasmo.
 
 ### 📈 Mis stats en GitHub
 <br>
@@ -47,3 +47,8 @@
   <a href = "mailto:agustinbrasburg@hotmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
   <a href="https://www.instagram.com/agustinbrasburg/" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
 </div>
+
+### 🚀 Proyectos destacados
+- 🔧 [**GIO - Gestión Integral Organizativa**]: Plataforma para gestión interna de organizaciones, desarrollada con Python y React.
+- 🧠 [**Cliente y Servidor Git en Rust**](https://github.com/ABrasburg/GitRust): Implementación académica de Git desde cero, utilizando Rust.
+- 📚 [**Problemas de Programación y Estructuras de Datos**](https://github.com/ABrasburg/Daily_problems): Colección de problemas resueltos en Python, con estructuras avanzadas.
