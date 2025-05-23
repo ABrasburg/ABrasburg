@@ -64,3 +64,12 @@ Notamos que esa explicación ayudó a que entendieran el proceso sin necesidad d
 Tengo mayor fluidez trabajando con Python y Java, dependiendo que de que orientado a objetos queramos que sea la solucion suelo elegir uno u otro.
 Durante el TPP usamos React para el desarrollo de la interfaz y FastAPI con SQLAlchemy para el backend, lo que me permitió aplicar mis conocimientos en APIs y manejo de bases de datos.
 
+***8. ¿Cómo te mantenés actualizado con las últimas tendencias y tecnologías en la industria informática?***
+
+***9. ¿Podés describir una vez que trabajaste como parte de un equipo? ¿Cuál fue tu rol y cómo contribuiste al éxito del proyecto?***
+
+Durante el Trabajo Práctico Profesional trabajé en un equipo de cuatro personas para desarrollar un sistema de gestión de personerías para el movimiento Barrios de Pie. En un primer momento fui quien impulsó la idea y se encargó del contacto inicial con el cliente. A medida que avanzamos, rotamos los roles intencionalmente para que todos pudiéramos experimentar distintas partes del desarrollo. Si bien me enfoqué principalmente en el backend (diseño de la API en Python y estructura de base de datos), también colaboré en el frontend y en la organización del proyecto. Creo que esa dinámica de rotación y colaboración fue clave para el éxito del equipo y para que cada uno pudiera crecer en distintas áreas.
+
+***10. ¿Cuál fue el error más grande que cometiste en un proyecto y cómo lo solucionaste?***
+
+Uno de los errores más grandes que cometí fue durante el Trabajo Práctico Profesional, cuando diseñamos inicialmente una estructura de base de datos muy compleja pensando en todos los posibles escenarios futuros, en lugar de enfocarnos en las necesidades concretas del cliente. Esto hizo que algunas funcionalidades fueran más difíciles de implementar y que perdiéramos tiempo valioso en refactorizaciones. Lo solucionamos volviendo a reunirnos con el cliente para redefinir prioridades, simplificamos el modelo de datos y reorganizamos el backlog para enfocarnos en lo esencial. Aprendí que a veces es mejor construir algo funcional e iterar, en lugar de buscar una solución perfecta desde el principio.
