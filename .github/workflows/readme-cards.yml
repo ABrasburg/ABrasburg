@@ -1,0 +1,106 @@
+name: Update README cards
+
+on:
+  schedule:
+    # 03:17 en Argentina (UTC-3).
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: profile-readme-cards
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    name: Generate public stats
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+
+      - name: Generate stats card
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2
+        with:
+          card: stats
+          options: username=ABrasburg&show_icons=true&theme=dracula&include_all_commits=true
+          core_version: '2.2.1'
+          path: profile/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: 'true'
+
+      - name: Generate top languages card
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2
+        with:
+          card: top-langs
+          options: username=ABrasburg&layout=compact&langs_count=7&theme=dracula
+          core_version: '2.2.1'
+          path: profile/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: 'true'
+
+      - name: Verify both cards before publishing
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+
+          for name in ('stats.svg', 'top-langs.svg'):
+              path = Path('profile') / name
+              root = ET.parse(path).getroot()
+              if root.tag != '{http://www.w3.org/2000/svg}svg':
+                  raise SystemExit(f'Invalid SVG: {path}')
+              text = ' '.join(root.itertext()).lower()
+              if any(error in text for error in ('something went wrong', 'maximum retries exceeded')):
+                  raise SystemExit(f'Error card rejected: {path}')
+              print(f'Verified {path}')
+          PY
+
+      - name: Upload validated cards
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: readme-cards
+          path: |
+            profile/stats.svg
+            profile/top-langs.svg
+          if-no-files-found: error
+          retention-days: 1
+
+  publish:
+    name: Publish validated cards
+    needs: generate
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout current profile
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: main
+
+      - name: Download validated cards
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: readme-cards
+          path: profile
+
+      - name: Commit cards when changed
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -- profile/stats.svg profile/top-langs.svg
+          if git diff --cached --quiet; then
+            echo 'Cards are already up to date.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'chore: update profile stats cards'
+          git push origin HEAD:main
