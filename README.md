@@ -6,8 +6,8 @@
 <br>
 
 <div align="center">
-  <img height="150em" src="https://github-readme-stats-sigma-five.vercel.app/api?username=ABrasburg&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"/> 
-  <img height="150em" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=ABrasburg&layout=compact&langs_count=7&theme=dracula&include_all_commits=true&count_private=true"/>
+  <img height="150em" src="./profile/stats.svg" alt="Estadísticas públicas de GitHub de ABrasburg"/>
+  <img height="150em" src="./profile/top-langs.svg" alt="Lenguajes más usados en los repositorios públicos de ABrasburg"/>
 </div>
 
 <br>
